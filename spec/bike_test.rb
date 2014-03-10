@@ -32,11 +32,7 @@ def test_red_bikes_are_cool
   #actaul value
   actual_value = bike.is_cool?
 
-  if actual_value == expected_value
-    print '.'
-  else
-    raise "Test failed. Expected #{expected_value} to equal #{actual_value}"
-  end
+  assert_equal(expected_value, actual_value)
 end
 
 def test_blue_bikes_are_not_cool
@@ -48,11 +44,7 @@ def test_blue_bikes_are_not_cool
   #actaul value
   actual_value = bike.is_cool?
 
-  if actual_value == expected_value
-    print '.'
-  else
-    raise "Test failed. Expected #{expected_value} to equal #{actual_value}"
-  end
+  assert_equal(expected_value, actual_value)
 end
 
 test_ask_bike_for_color
