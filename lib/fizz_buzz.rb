@@ -4,6 +4,18 @@ class FizzBuzz
   end
 
   def arrayify
-    1.upto(@high_limit).to_a
+    numbers = 1.upto(@high_limit).to_a
+
+    i = 0
+
+    while (i < numbers.length)
+      if (numbers[i] % 3 == 0)
+        numbers[i] = "Fizz"
+      end
+
+      i += 1
+    end
+
+    numbers
   end
 end

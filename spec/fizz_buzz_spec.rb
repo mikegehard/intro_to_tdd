@@ -3,10 +3,10 @@ require "rspec/core"
 require "fizz_buzz"
 
 describe FizzBuzz do
-  it "returns an array from 1 to the number passed in" do
-    fizzbuzz = FizzBuzz.new(5)
+  it "replaces multiples of 3 with Fizz" do
+    fizzbuzz = FizzBuzz.new(6)
 
-    expected = [1, 2, 3, 4, 5]
+    expected = [1, 2, 'Fizz', 4, 5, 'Fizz']
 
     actual = fizzbuzz.arrayify
 
