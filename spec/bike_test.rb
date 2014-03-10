@@ -28,6 +28,6 @@ class TestBike < Minitest::Test
     #set up
     bike = Bike.new("blue")
 
-    assert(!bike.is_cool?)
+    refute(bike.is_cool?)
   end
 end
