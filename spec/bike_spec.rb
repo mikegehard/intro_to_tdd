@@ -1,10 +1,10 @@
 $LOAD_PATH.unshift(File.expand_path('lib'), __FILE__)
 
 require 'bike'
-require "minitest/autorun"
+require "rspec/core"
 
-class TestBike < Minitest::Test
-  def test_ask_bike_for_color
+describe Bike do
+  it "can tell you what color it is" do
     #set up
     bike = Bike.new("red")
 
@@ -14,20 +14,20 @@ class TestBike < Minitest::Test
     #actaul value
     actual_color = bike.color
 
-    assert_equal(expected_color, actual_color)
+    expect(expected_color).to eq actual_color
   end
 
-  def test_red_bikes_are_cool
+  it "knows that red bikes are cool" do
     #set up
     bike = Bike.new("red")
 
-    assert(bike.is_cool?)
+    expect(bike.is_cool?).to eq true
   end
 
-  def test_blue_bikes_are_not_cool
+  it "knows that blue bikes are not cool" do
     #set up
     bike = Bike.new("blue")
 
-    refute(bike.is_cool?)
+    expect(bike.is_cool?).to eq false
   end
 end
