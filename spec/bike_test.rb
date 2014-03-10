@@ -21,23 +21,13 @@ class TestBike < Minitest::Test
     #set up
     bike = Bike.new("red")
 
-    expected_value = true
-
-    #actaul value
-    actual_value = bike.is_cool?
-
-    assert_equal(expected_value, actual_value)
+    assert(bike.is_cool?)
   end
 
   def test_blue_bikes_are_not_cool
     #set up
     bike = Bike.new("blue")
 
-    expected_value = false
-
-    #actaul value
-    actual_value = bike.is_cool?
-
-    assert_equal(expected_value, actual_value)
+    assert(!bike.is_cool?)
   end
 end
