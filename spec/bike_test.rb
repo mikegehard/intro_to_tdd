@@ -2,6 +2,14 @@ $LOAD_PATH.unshift(File.expand_path('lib'), __FILE__)
 
 require 'bike'
 
+def assert_equal(expected, actual)
+  if expected == actual
+    print '.'
+  else
+    raise "Test failed. Expected #{expected} to equal #{actual}"
+  end
+end
+
 def test_ask_bike_for_color
   #set up
   bike = Bike.new("red")
@@ -12,11 +20,7 @@ def test_ask_bike_for_color
   #actaul value
   actual_color = bike.color
 
-  if actual_color == expected_color
-    print '.'
-  else
-    raise "Test failed. Expected #{expected_color} to equal #{actual_color}"
-  end
+  assert_equal(expected_color, actual_color)
 end
 
 def test_red_bikes_are_cool
