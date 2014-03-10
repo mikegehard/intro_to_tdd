@@ -9,16 +9,14 @@ class FizzBuzz
     i = 0
 
     while (i < numbers.length)
-      if (is_multiple_of?(3, numbers[i]) && is_multiple_of?(5, numbers[i]))
-        numbers[i] = "FizzBuzz"
-      end
 
-      if (is_multiple_of?(3, numbers[i]))
-        numbers[i] = "Fizz"
-      end
-
-      if (is_multiple_of?(5, numbers[i]))
-        numbers[i] = "Buzz"
+      case
+        when is_multiple_of?(3, numbers[i]) && is_multiple_of?(5, numbers[i])
+          numbers[i] = "FizzBuzz"
+        when is_multiple_of?(3, numbers[i])
+          numbers[i] = "Fizz"
+        when is_multiple_of?(5, numbers[i])
+          numbers[i] = "Buzz"
       end
 
       i += 1
