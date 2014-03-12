@@ -38,4 +38,13 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+  it 'allows use to specify delimiter' do
+    calculator = StringCalculator.new("+")
+
+    expected = 10
+
+    actual = calculator.add("1+2+7")
+
+    expect(actual).to eq expected
+  end
 end
