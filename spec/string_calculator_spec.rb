@@ -20,4 +20,22 @@ describe StringCalculator do
 
     expect(actual).to eq expected
   end
+  it 'returns 1 if the string "1" is passed' do
+    calculator = StringCalculator.new
+
+    expected = 1
+
+    actual = calculator.add("1")
+
+    expect(actual).to eq expected
+  end
+  it 'returns 10 if the string "1,2,7" is passed' do
+    calculator = StringCalculator.new
+
+    expected = 10
+
+    actual = calculator.add("1,2,7")
+
+    expect(actual).to eq expected
+  end
 end

@@ -3,7 +3,12 @@ class StringCalculator
     if string.empty?
       0
     else
-      string.to_i
+      numbers = string.split(",")
+      sum = 0
+      numbers.each do |n|
+        sum += n.to_i
+      end
+      sum
     end
   end
 end
